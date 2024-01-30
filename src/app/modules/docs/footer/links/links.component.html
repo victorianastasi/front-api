@@ -1,0 +1,30 @@
+<article>
+  <h2 class="items-titles">Footer - Enlaces</h2>
+  <app-spinner [loading]="isLoading"></app-spinner>
+  <section class="mb-5">
+    <h3>Obtén todos los enlaces</h3>
+    <p>
+      Puedes acceder a la lista de enlaces utilizando el endpoint
+      <span class="fst-italic">/footer/links</span>.
+    </p>
+
+    <div class="code-box bg-dark p-4 text-light">
+      <p>
+        <span class="text-green fw-bold pe-2">GET</span>
+        <span>{{ footerLinksUrl }}</span>
+      </p>
+      <hr />
+      <div>
+        <pre>{{ dataLinks | json }}</pre>
+      </div>
+      <hr />
+    </div>
+
+    <div class="code-box bg-light p-4 text-dark mt-5">
+      <p class="fw-bold">Ejemplo:</p>
+      <div *ngFor="let link of dataLinks">
+        <a href="{{ link.url }}">{{ link.title }}</a>
+      </div>
+    </div>
+  </section>
+</article>

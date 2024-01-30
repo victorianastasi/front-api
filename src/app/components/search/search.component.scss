@@ -1,0 +1,18 @@
+.form-control#search {
+    width: 300px;
+    min-height: 40px;
+}
+
+::ng-deep {
+    .dropdown-item.active {
+        background-color: #637689;
+    }
+}
+
+.btn-search {
+    max-height: 40px;
+    width: 40px;
+    position: relative;
+    right: 40px;
+    top: -2px;
+}

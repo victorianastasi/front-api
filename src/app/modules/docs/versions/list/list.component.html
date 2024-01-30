@@ -1,0 +1,90 @@
+<article>
+  <h2 class="items-titles">Versiones - Listado</h2>
+  <app-spinner [loading]="isLoading"></app-spinner>
+  <section *ngIf="!isLoading" class="mb-5">
+    <h3>Obtén el listado de las versiones</h3>
+    <p>
+      Puedes acceder al listado de las versiones utilizando el endpoint
+      <span class="fst-italic">/versions/list</span>.
+    </p>
+    <div class="code-box bg-dark p-4 text-light">
+      <p>
+        <span class="text-green fw-bold pe-2">GET</span>
+        <span>{{ versionsListUrl }}</span>
+      </p>
+      <hr />
+      <app-toggler-code
+        [shorthand]="shorthandList"
+        (toggle)="toggleList()"
+        [fullData]="dataList"
+        [lastElement]="{ version: '...', date: '...' }"
+      ></app-toggler-code>
+      <hr />
+      <p class="fw-bold">Resultado:</p>
+      <div>
+        <button
+          (click)="toggleExampleList()"
+          class="btn d-flex align-items-center fs-6 justify-content-center ms-auto"
+          style="min-width: 110px"
+          [ngClass]="{
+            'btn-primary': !shorthandExampleList,
+            'btn-light': shorthandExampleList
+          }"
+        >
+          <ng-container *ngIf="shorthandExampleList; else more"
+            >Ver menos <i class="bx bx-minus ps-2"></i
+          ></ng-container>
+          <ng-template #more
+            >Ver más <i class="bx bx-plus ps-2"></i
+          ></ng-template>
+        </button>
+      </div>
+      <div>
+        <div class="my-4 position-relative">
+          <ng-container *ngFor="let data of dataList; let i = index">
+            <ng-container *ngIf="shorthandExampleList">
+              <ng-container
+                *ngTemplateOutlet="dataTemplate; context: { data: data }"
+              ></ng-container>
+            </ng-container>
+
+            <ng-container *ngIf="!shorthandExampleList">
+              <ng-container *ngIf="i < 5">
+                <ng-container
+                  *ngTemplateOutlet="dataTemplate; context: { data: data }"
+                ></ng-container>
+                <div class="vertical-gradient-smooth"></div>
+              </ng-container>
+            </ng-container>
+          </ng-container>
+        </div>
+      </div>
+    </div>
+    <ng-template #dataTemplate let-data="data">
+      <p>
+        <span class="text-warning fw-bold">Versión:</span>
+        {{ data.version }} - <small>Fecha: {{ data.date }}</small>
+      </p>
+    </ng-template>
+  </section>
+  <section *ngIf="!isLoading" class="mb-5">
+    <h3>Obtén el listado de las versiones en orden descendiente</h3>
+    <p>
+      Puedes acceder al listado de las versiones utilizando el endpoint
+      <span class="fst-italic">/versions/list?order=desc</span>.
+    </p>
+    <div class="code-box bg-dark p-4 text-light">
+      <p>
+        <span class="text-green fw-bold pe-2">GET</span>
+        <span>{{ versionsListUrlDown }}</span>
+      </p>
+      <hr />
+      <app-toggler-code
+        [shorthand]="shorthandListDown"
+        (toggle)="toggleListDown()"
+        [fullData]="dataListDown"
+        [lastElement]="{ version: '...', date: '...' }"
+      ></app-toggler-code>
+    </div>
+  </section>
+</article>

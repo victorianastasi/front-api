@@ -1,0 +1,20 @@
+<label for="search" class="visually-hidden">Buscar:</label>
+<input
+  id="search"
+  type="text"
+  class="form-control d-inline-block"
+  [(ngModel)]="model"
+  [ngbTypeahead]="search"
+  (focus)="focus$.next($any($event).target.value)"
+  (click)="click$.next($any($event).target.value)"
+  #instance="ngbTypeahead"
+  placeholder="Buscar.."
+  (keyup.enter)="handleSearch()"
+/>
+<button class="btn btn-secondary btn-search" title="Buscar" (click)="handleSearch()"><i class="bx bx-search-alt" ></i></button>
+
+<ng-container *ngIf="noResults">
+  <div class="dropdown-menu show">
+    <p class="mb-0 text-muted py-1 px-3">No hay coincidencias</p>
+  </div>
+</ng-container>

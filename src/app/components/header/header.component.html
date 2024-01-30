@@ -1,1 +1,71 @@
-<p class="d-block">header works!</p>
+<header class="bg-light py-2">
+  <div class="container">
+    <nav class="d-flex align-items-center justify-content-between">
+      <a href="/" class="">
+        <img
+          src="../../../assets/logo-obelisco.svg"
+          alt="Obelisco"
+          width="100"
+          height="24"
+          class="d-inline-block align-text-top"
+        />
+      </a>
+      <div class="d-none d-md-flex">
+        <ng-container *ngTemplateOutlet="navContent"></ng-container>
+      </div>
+      <button
+        class="btn btn-outline-secondary flex justify-content-center align-items-center d-md-none"
+        (click)="openEnd(content)"
+      >
+        <mat-icon class="mt-1">menu</mat-icon>
+      </button>
+    </nav>
+
+    <ng-template #content let-offcanvas>
+      <div class="offcanvas-header">
+        <h4 class="offcanvas-title">Menú</h4>
+        <button
+          type="button"
+          class="btn-close"
+          aria-label="Close"
+          (click)="offcanvas.dismiss('Cross click')"
+        ></button>
+      </div>
+      <div class="offcanvas-body">
+        <ng-container *ngTemplateOutlet="navContent"></ng-container>
+      </div>
+    </ng-template>
+  </div>
+</header>
+
+<ng-template #navContent>
+  <ul
+    ngbNav
+    #nav="ngbNav"
+    class="nav-pills nav-dark flex flex-md-row flex-column gap-4"
+  >
+    <li ngbNavItem>
+      <a
+        ngbNavLink
+        class="nav-link nav-link__header"
+        routerLink="docs"
+        [class.active]="isRouteActive('/docs')"
+        (click)="closeEnd(content)"
+        >Docs</a
+      >
+    </li>
+    <li ngbNavItem>
+      <a
+        ngbNavLink
+        class="nav-link nav-link__header"
+        routerLink="about"
+        [class.active]="isRouteActive('/about')"
+        (click)="closeEnd(content)"
+        >About</a
+      >
+    </li>
+    <li>
+      <app-search></app-search>
+    </li>
+  </ul>
+</ng-template>

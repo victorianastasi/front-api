@@ -1,0 +1,13 @@
+@import "bootstrap/scss/bootstrap";
+
+.nav-pills {
+  .nav-link__header {
+    border: 1px solid $gray-800;
+    width: fit-content;
+    color: $gray-800;
+    &.active,
+    &:active {
+      background-color: $gray-800;
+    }
+  }
+}
