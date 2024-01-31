@@ -18,12 +18,11 @@
         <pre>{{ dataLinks | json }}</pre>
       </div>
       <hr />
-    </div>
-
-    <div class="code-box bg-light p-4 text-dark mt-5">
-      <p class="fw-bold">Ejemplo:</p>
-      <div *ngFor="let link of dataLinks">
-        <a href="{{ link.url }}">{{ link.title }}</a>
+      <p class="fw-bold">Resultado:</p>
+      <div class="my-4 border border-light border-2 rounded p-3 bg-light">
+        <div *ngFor="let link of dataLinks">
+          <a href="{{ link.url }}">{{ link.title }}</a>
+        </div>
       </div>
     </div>
   </section>

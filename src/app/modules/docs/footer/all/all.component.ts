@@ -4,26 +4,31 @@ import { DataService } from 'src/app/data.service';
 @Component({
   selector: 'app-all',
   templateUrl: './all.component.html',
-  styleUrls: ['./all.component.scss']
+  styleUrls: ['./all.component.scss'],
 })
 export class AllComponent implements OnInit {
-  public footerAllUrl = 'https://obelisco-back-production.up.railway.app/api/obelisco/footer/all';
+  public footerAllUrl =
+    'https://obelisco-back-production.up.railway.app/api/obelisco/footer/all';
   public dataAll: any;
   public isLoading: boolean = true;
+  public shorthandAll: boolean = false;
 
-  constructor(private data: DataService) { }
+  constructor(private data: DataService) {}
 
   ngOnInit() {
     this.data.getData(this.footerAllUrl).subscribe(
-      data => {
+      (data) => {
         this.dataAll = data;
         this.isLoading = false;
       },
-      error => {
+      (error) => {
         console.error(error);
         this.isLoading = false;
       }
     );
+    console.log(this.dataAll);
+  }
+  toggleVisibility() {
+    this.shorthandAll = !this.shorthandAll;
   }
 }
-

@@ -40,7 +40,7 @@
         </button>
       </div>
       <div>
-        <div class="my-4 position-relative">
+        <div class="position-relative">
           <ng-container *ngFor="let data of dataList; let i = index">
             <ng-container *ngIf="shorthandExampleList">
               <ng-container
@@ -53,7 +53,9 @@
                 <ng-container
                   *ngTemplateOutlet="dataTemplate; context: { data: data }"
                 ></ng-container>
-                <div class="vertical-gradient-smooth"></div>
+                <ng-container *ngIf="i === 0">
+                  <div class="vertical-gradient"></div>
+                </ng-container>
               </ng-container>
             </ng-container>
           </ng-container>
