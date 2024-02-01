@@ -7,16 +7,25 @@
       Puedes acceder a todos los datos utilizando el endpoint
       <span class="fst-italic">/footer/all</span>.
     </p>
-    <div class="code-box bg-dark p-4 text-light">
-      <p>
-        <span class="text-green fw-bold pe-2">GET</span>
-        <span>{{ footerAllUrl }}</span>
+    <div class="code-box bg-dark p-4 text-light rounded-sm">
+      <p class="code-url">
+        <span>
+          <span class="text-green fw-bold pe-2">GET</span>
+          <span>
+            {{ footerAllUrl }}
+          </span>
+        </span>
+        <i
+          class="bx bx-copy-alt"
+          style="color: #ffffff"
+          ngxClipboard
+          [cbContent]="footerAllUrl"
+        ></i>
       </p>
       <hr />
       <div>
         <pre>{{ dataAll | json }}</pre>
       </div>
-      <hr />
     </div>
   </section>
 </article>

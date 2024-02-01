@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { URL_BASE } from 'src/app/constants/components.constants';
 import { DataService } from 'src/app/data.service';
 
 @Component({
@@ -7,12 +8,11 @@ import { DataService } from 'src/app/data.service';
   styleUrls: ['./images.component.scss'],
 })
 export class ImagesComponent implements OnInit {
-  public footerImagesUrl =
-    'https://obelisco-back-production.up.railway.app/api/obelisco/footer/images';
-  public footerImagesUrl1 =
-    'https://obelisco-back-production.up.railway.app/api/obelisco/footer/images/1';
+  public footerImagesUrl = URL_BASE + '/api/obelisco/footer/images';
+  public footerImagesUrl1 = URL_BASE + '/api/obelisco/footer/images/1';
   public dataImages: any;
   public isLoading: boolean = true;
+  public URL_BASE = URL_BASE;
 
   constructor(private data: DataService) {}
 

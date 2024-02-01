@@ -1,15 +1,35 @@
 /* You can add global styles to this file, and also import other style files */
 
 /* Importing Bootstrap SCSS file. */
-@import 'bootstrap/scss/bootstrap';
-@import 'highlight.js/styles/default.css';
-@import 'highlight.js/styles/github.css';
-@import 'highlight.js/scss/a11y-dark.scss';
+@import "bootstrap/scss/bootstrap";
+@import "highlight.js/styles/default.css";
+@import "highlight.js/styles/github.css";
+@import "highlight.js/scss/a11y-dark.scss";
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
-
-.text-cadetblue {
-    color: cadetblue;
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 
+.text-cadetblue {
+  color: cadetblue;
+}
+
+.code-box {
+  border-radius: 4px;
+}
+
+.code-url {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  i {
+    cursor: pointer;
+  }
+}

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { URL_BASE } from 'src/app/constants/components.constants';
 import { DataService } from 'src/app/data.service';
 
 @Component({
@@ -7,8 +8,7 @@ import { DataService } from 'src/app/data.service';
   styleUrls: ['./all-versions.component.scss'],
 })
 export class AllVersionsComponent implements OnInit {
-  public versionsAllUrl =
-    'https://obelisco-back-production.up.railway.app/api/obelisco/versions/all';
+  public versionsAllUrl = URL_BASE + '/api/obelisco/versions/all';
   public dataAll: any;
   public shorthandList: boolean = false;
   public shorthandExampleAll: boolean = false;
