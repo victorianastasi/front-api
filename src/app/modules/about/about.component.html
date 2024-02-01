@@ -1,89 +1,64 @@
 <div class="container my-5">
-  <h2 class="mb-4">Preguntas frecuentes</h2>
-  <div class="mb-2 d-flex justify-content-end sticky-top">
-    <button
-      type="button"
-      class="btn btn-sm btn-danger"
-      (click)="aboutAccordion.collapseAll()"
-    >
-      Cerrar todo
-    </button>
+  <div className="col justify-content-center align-items-center">
+    <h1 className="about-title">Obelis-que?</h1>
+    <p className="about-description">
+      Conozca un poco sobre el equipo y lo que nos impulsa
+    </p>
+    <div class="card mb-3" style="max-width: 540px">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img
+            src="https://previews.123rf.com/images/yurich84/yurich841803/yurich84180300138/98798800-lines-of-php-code-on-the-monitor-dark-blue-background-macro.jpg"
+            class="img-fluid rounded-start h-100"
+            alt="..."
+          />
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">
+              This is a wider card with supporting text below as a natural
+              lead-in to additional content.
+            </p>
+            <p class="card-text">
+              <small class="text-body-secondary">Last updated 3 mins ago</small>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br />
+    <div class="card mb-3" style="max-width: 540px">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img
+            src="https://previews.123rf.com/images/yurich84/yurich841803/yurich84180300138/98798800-lines-of-php-code-on-the-monitor-dark-blue-background-macro.jpg"
+            class="img-fluid rounded-start h-100"
+            alt="..."
+          />
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">
+              This is a wider card with supporting text below as a natural
+              lead-in to additional content.
+            </p>
+            <p class="card-text">
+              <small class="text-body-secondary">Last updated 3 mins ago</small>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br />
+    <br />
+    <h2 className="about-title">Conoce al equipo</h2>
+    <p className="about-description">
+      Somos un equipo de trabajo interdisciplinario, <br />
+      una sinergia entre Diseñadores expertos en experiencia e interfaz para el
+      usuario, <br />
+      y también Desarrolladores Front End.
+    </p>
   </div>
-  <ngb-accordion #aboutAccordion>
-    <ngb-panel id="static-1" title="First">
-      <ng-template ngbPanelContent>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum magni
-        delectus iste dignissimos eos exercitationem! Ab nesciunt alias quas
-        magni, error fugiat doloremque, unde, voluptatum atque quasi architecto
-        porro vero.
-      </ng-template>
-    </ngb-panel>
-    <ngb-panel id="static-2" title="Second">
-      <ng-template ngbPanelContent>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum magni
-        delectus iste dignissimos eos exercitationem! Ab nesciunt alias quas
-        magni, error fugiat doloremque, unde, voluptatum atque quasi architecto
-        porro vero.
-      </ng-template>
-    </ngb-panel>
-    <ngb-panel id="static-3" title="Third">
-      <ng-template ngbPanelContent>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum magni
-        delectus iste dignissimos eos exercitationem! Ab nesciunt alias quas
-        magni, error fugiat doloremque, unde, voluptatum atque quasi architecto
-        porro vero.
-      </ng-template>
-    </ngb-panel>
-    <ngb-panel id="static-4" title="Fourth">
-      <ng-template ngbPanelContent>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum magni
-        delectus iste dignissimos eos exercitationem! Ab nesciunt alias quas
-        magni, error fugiat doloremque, unde, voluptatum atque quasi architecto
-        porro vero.
-      </ng-template>
-    </ngb-panel>
-    <ngb-panel id="static-5">
-      <ng-template ngbPanelTitle>
-        <span>Fifth</span>
-      </ng-template>
-      <ng-template ngbPanelContent>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum magni
-        delectus iste dignissimos eos exercitationem! Ab nesciunt alias quas
-        magni, error fugiat doloremque, unde, voluptatum atque quasi architecto
-        porro vero.
-      </ng-template>
-    </ngb-panel>
-    <ngb-panel id="static-6" title="Sixth">
-      <ng-template ngbPanelContent>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum magni
-        delectus iste dignissimos eos exercitationem! Ab nesciunt alias quas
-        magni, error fugiat doloremque, unde, voluptatum atque quasi architecto
-        porro vero.
-      </ng-template>
-    </ngb-panel>
-    <ngb-panel id="static-7" title="Seventh">
-      <ng-template ngbPanelContent>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum magni
-        delectus iste dignissimos eos exercitationem! Ab nesciunt alias quas
-        magni, error fugiat doloremque, unde, voluptatum atque quasi architecto
-        porro vero.
-      </ng-template>
-    </ngb-panel>
-    <ngb-panel id="static-8" title="Eighth">
-      <ng-template ngbPanelContent>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum magni
-        delectus iste dignissimos eos exercitationem! Ab nesciunt alias quas
-        magni, error fugiat doloremque, unde, voluptatum atque quasi architecto
-        porro vero.
-      </ng-template>
-    </ngb-panel>
-    <ngb-panel id="static-9" title="Nineth">
-      <ng-template ngbPanelContent>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum magni
-        delectus iste dignissimos eos exercitationem! Ab nesciunt alias quas
-        magni, error fugiat doloremque, unde, voluptatum atque quasi architecto
-        porro vero.
-      </ng-template>
-    </ngb-panel>
-  </ngb-accordion>
 </div>
