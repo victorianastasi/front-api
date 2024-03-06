@@ -6,16 +6,16 @@ import { AllVersionsComponent } from './all-versions/all-versions.component';
 import { VersionsRoutingModule } from './versions-routing.module';
 import { SpinnerModule } from 'src/app/components/spinner/spinner.module';
 import { TogglerModule } from 'src/app/components/toggler/toggler.module';
-
+import { ClipboardModule } from 'ngx-clipboard';
 
 @NgModule({
-  declarations: [
-    ListComponent,
-    NumberComponent,
-    AllVersionsComponent
-  ],
+  declarations: [ListComponent, NumberComponent, AllVersionsComponent],
   imports: [
-    CommonModule, VersionsRoutingModule, SpinnerModule, TogglerModule
-  ]
+    CommonModule,
+    VersionsRoutingModule,
+    SpinnerModule,
+    TogglerModule,
+    ClipboardModule,
+  ],
 })
-export class VersionsModule { }
+export class VersionsModule {}

@@ -11,7 +11,13 @@
   placeholder="Buscar.."
   (keyup.enter)="handleSearch()"
 />
-<button class="btn btn-secondary btn-search" title="Buscar" (click)="handleSearch()"><i class="bx bx-search-alt" ></i></button>
+<button
+  class="btn btn-secondary btn-search m-0"
+  title="Buscar"
+  (click)="handleSearch()"
+>
+  <i class="bx bx-search-alt"></i>
+</button>
 
 <ng-container *ngIf="noResults">
   <div class="dropdown-menu show">

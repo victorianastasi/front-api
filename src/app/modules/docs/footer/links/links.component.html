@@ -9,9 +9,19 @@
     </p>
 
     <div class="code-box bg-dark p-4 text-light">
-      <p>
-        <span class="text-green fw-bold pe-2">GET</span>
-        <span>{{ footerLinksUrl }}</span>
+      <p class="code-url">
+        <span>
+          <span class="text-green fw-bold pe-2">GET</span>
+          <span>
+            {{ footerLinksUrl }}
+          </span>
+        </span>
+        <i
+          class="bx bx-copy-alt"
+          style="color: #ffffff"
+          ngxClipboard
+          [cbContent]="footerLinksUrl"
+        ></i>
       </p>
       <hr />
       <div>

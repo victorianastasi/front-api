@@ -8,9 +8,19 @@
       <span class="fst-italic">/versions/all</span>.
     </p>
     <div class="code-box bg-dark p-4 text-light">
-      <p>
-        <span class="text-green fw-bold pe-2">GET</span>
-        <span>{{ versionsAllUrl }}</span>
+      <p class="code-url">
+        <span>
+          <span class="text-green fw-bold pe-2">GET</span>
+          <span>
+            {{ versionsAllUrl }}
+          </span>
+        </span>
+        <i
+          class="bx bx-copy-alt"
+          style="color: #ffffff"
+          ngxClipboard
+          [cbContent]="versionsAllUrl"
+        ></i>
       </p>
       <hr />
       <app-toggler-code

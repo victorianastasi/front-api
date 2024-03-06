@@ -1,3 +1,6 @@
+// export const URL_BASE = "https://obelisco.com/";
+export const URL_BASE = 'https://obelisco-back-production.up.railway.app';
+
 export interface DocumentData {
   title: string;
   route?: string;
@@ -33,9 +36,7 @@ export const NAVIGATION_DOCS: DocumentData[] = [
     title: 'Resolución',
     route: '/docs/resolution',
     id: 'collapseResolution',
-    items: [
-      { title: 'Resolución', route: '/docs/resolution' }
-    ],
+    items: [{ title: 'Resolución', route: '/docs/resolution' }],
   },
   {
     title: 'Versiones',
@@ -44,7 +45,7 @@ export const NAVIGATION_DOCS: DocumentData[] = [
     items: [
       { title: 'Todas', route: '/docs/versions/all' },
       { title: 'Listado', route: '/docs/versions/list' },
-      { title: 'Número de versión', route: '/docs/versions/number' }
+      { title: 'Número de versión', route: '/docs/versions/number' },
     ],
-  }
+  },
 ];

@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { NAVIGATION_DOCS } from 'src/app/constants/components.constants';
+import {
+  NAVIGATION_DOCS,
+  URL_BASE,
+} from 'src/app/constants/components.constants';
 import { DataService } from 'src/app/data.service';
 import { Router } from '@angular/router';
 
@@ -29,8 +32,7 @@ export class DocsComponent implements OnInit {
 
     return titleWithoutAccents.toLowerCase().replace(/\s/g, '-');
   }
-  public footerImagesUrl =
-    'https://obelisco-back-production.up.railway.app/api/obelisco/footer/images';
+  public footerImagesUrl = URL_BASE + '/api/obelisco/footer/images';
 
   public dataImages: any;
   ngOnInit() {
@@ -51,5 +53,4 @@ export class DocsComponent implements OnInit {
   isRouteActive(route: string): boolean {
     return this.router.url === route;
   }
-  
 }
