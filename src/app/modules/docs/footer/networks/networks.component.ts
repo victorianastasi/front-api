@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { URL_BASE } from 'src/app/constants/components.constants';
 import { DataService } from 'src/app/data.service';
 
 @Component({
@@ -7,8 +8,7 @@ import { DataService } from 'src/app/data.service';
   styleUrls: ['./networks.component.scss'],
 })
 export class NetworksComponent implements OnInit {
-  public footerNetworksUrl =
-    'https://obelisco-back-production.up.railway.app/api/obelisco/footer/networks';
+  public footerNetworksUrl = URL_BASE + '/api/obelisco/footer/networks';
   public dataNetworks: any;
   public isLoading: boolean = true;
 

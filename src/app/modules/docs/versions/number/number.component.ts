@@ -1,27 +1,28 @@
 import { Component, OnInit } from '@angular/core';
+import { URL_BASE } from 'src/app/constants/components.constants';
 import { DataService } from 'src/app/data.service';
 
 @Component({
   selector: 'app-number',
   templateUrl: './number.component.html',
-  styleUrls: ['./number.component.scss']
+  styleUrls: ['./number.component.scss'],
 })
 export class NumberComponent implements OnInit {
-  public versionsNumberUrl = 'https://obelisco-back-production.up.railway.app/api/obelisco/versions/1.53.0';
+  public versionsNumberUrl = URL_BASE + '/api/obelisco/versions/1.53.0';
   public dataNumber: any;
   public shorthandNumber: boolean = false;
 
   public isLoading: boolean = true;
 
-  constructor(private data: DataService) { }
+  constructor(private data: DataService) {}
 
   ngOnInit() {
     this.data.getData(this.versionsNumberUrl).subscribe(
-      data => {
+      (data) => {
         this.dataNumber = data;
         this.isLoading = false;
       },
-      error => {
+      (error) => {
         console.error(error);
         this.isLoading = false;
       }
@@ -31,5 +32,4 @@ export class NumberComponent implements OnInit {
   toggleNumber() {
     this.shorthandNumber = !this.shorthandNumber;
   }
-
 }

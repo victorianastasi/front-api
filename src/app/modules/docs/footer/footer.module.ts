@@ -7,7 +7,7 @@ import { PhonesComponent } from './phones/phones.component';
 import { LinksComponent } from './links/links.component';
 import { NetworksComponent } from './networks/networks.component';
 import { SpinnerModule } from 'src/app/components/spinner/spinner.module';
-
+import { ClipboardModule } from 'ngx-clipboard';
 
 @NgModule({
   declarations: [
@@ -15,10 +15,8 @@ import { SpinnerModule } from 'src/app/components/spinner/spinner.module';
     ImagesComponent,
     PhonesComponent,
     LinksComponent,
-    NetworksComponent
+    NetworksComponent,
   ],
-  imports: [
-    CommonModule, FooterRoutingModule, SpinnerModule
-  ]
+  imports: [CommonModule, FooterRoutingModule, SpinnerModule, ClipboardModule],
 })
-export class FooterModule { }
+export class FooterModule {}

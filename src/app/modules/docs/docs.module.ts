@@ -6,10 +6,11 @@ import { DocsRoutingModule } from './docs-routing.module';
 import { FooterComponent } from './footer/footer.component';
 import { ResolutionComponent } from './resolution/resolution.component';
 import { VersionsComponent } from './versions/versions.component';
+import { ClipboardModule } from 'ngx-clipboard';
 
 @NgModule({
   declarations: [FooterComponent, ResolutionComponent, VersionsComponent],
-  imports: [CommonModule, HighlightModule, DocsRoutingModule],
+  imports: [CommonModule, HighlightModule, DocsRoutingModule, ClipboardModule],
   providers: [
     {
       provide: HIGHLIGHT_OPTIONS,

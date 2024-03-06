@@ -8,9 +8,19 @@
       <span class="fst-italic">/versions/1.53.0</span>.
     </p>
     <div class="code-box bg-dark p-4 text-light">
-      <p>
-        <span class="text-green fw-bold pe-2">GET</span>
-        <span>{{ versionsNumberUrl }}</span>
+      <p class="code-url">
+        <span>
+          <span class="text-green fw-bold pe-2">GET</span>
+          <span>
+            {{ versionsNumberUrl }}
+          </span>
+        </span>
+        <i
+          class="bx bx-copy-alt"
+          style="color: #ffffff"
+          ngxClipboard
+          [cbContent]="versionsNumberUrl"
+        ></i>
       </p>
       <hr />
       <div>
