@@ -11,6 +11,7 @@ export class AllComponent implements OnInit {
   public footerAllUrl = URL_BASE + '/api/obelisco/footer/all';
   public dataAll: any;
   public isLoading: boolean = true;
+  public shorthandAll: boolean = false;
 
   constructor(private data: DataService) {}
 
@@ -25,5 +26,9 @@ export class AllComponent implements OnInit {
         this.isLoading = false;
       }
     );
+    console.log(this.dataAll);
+  }
+  toggleVisibility() {
+    this.shorthandAll = !this.shorthandAll;
   }
 }

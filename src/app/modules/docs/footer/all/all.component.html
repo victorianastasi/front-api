@@ -24,7 +24,37 @@
       </p>
       <hr />
       <div>
-        <pre>{{ dataAll | json }}</pre>
+        <div>
+          <button
+            (click)="toggleVisibility()"
+            class="btn d-flex align-items-center fs-6 justify-content-center ms-auto"
+            style="min-width: 110px"
+            [ngClass]="{
+              'btn-primary': !shorthandAll,
+              'btn-light': shorthandAll
+            }"
+          >
+            <ng-container *ngIf="shorthandAll; else more"
+              >Ver menos <i class="bx bx-minus ps-2"></i
+            ></ng-container>
+            <ng-template #more
+              >Ver más <i class="bx bx-plus ps-2"></i
+            ></ng-template>
+          </button>
+        </div>
+        <div>
+          <ng-container *ngIf="shorthandAll">
+            <pre>{{ dataAll | json }}</pre>
+          </ng-container>
+          <ng-container *ngIf="!shorthandAll">
+            <div class="position-relative">
+              <pre style="max-height: 700px; overflow: hidden">{{
+                dataAll | json
+              }}</pre>
+              <div class="vertical-gradient"></div>
+            </div>
+          </ng-container>
+        </div>
       </div>
     </div>
   </section>

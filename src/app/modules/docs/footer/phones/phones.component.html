@@ -27,6 +27,13 @@
       <div>
         <pre>{{ dataPhones | json }}</pre>
       </div>
+      <hr />
+      <p class="fw-bold">Resultado:</p>
+      <div class="my-4 border border-light border-2 rounded p-3 bg-light">
+        <ng-container *ngFor="let data of dataPhones; let i = index">
+          <a href="{{ data.number }}" class="d-block mb-2">{{ data.title }}</a>
+        </ng-container>
+      </div>
     </div>
   </section>
 </article>
