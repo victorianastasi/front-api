@@ -9,11 +9,11 @@
           class="d-inline-block align-text-top"
         />
       </a>
-      <div class="d-none d-md-flex">
+      <div class="d-none d-lg-flex">
         <ng-container *ngTemplateOutlet="navContent"></ng-container>
       </div>
       <button
-        class="btn btn-outline-secondary flex justify-content-center align-items-center d-md-none"
+        class="btn btn-outline-secondary flex justify-content-center align-items-center d-lg-none"
         (click)="openEnd(content)"
       >
         <mat-icon class="mt-1">menu</mat-icon>
@@ -41,7 +41,7 @@
   <ul
     ngbNav
     #nav="ngbNav"
-    class="nav-pills nav-dark flex flex-md-row flex-column gap-2"
+    class="nav-pills nav-dark flex flex-lg-row flex-column gap-2"
   >
     <li ngbNavItem>
       <a

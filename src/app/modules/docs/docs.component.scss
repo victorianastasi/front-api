@@ -5,6 +5,7 @@ mat-icon:not(.mat-icon-arrow) {
 
 .text-green {
   color: #007bc7;
+  color: #4df75e;
 }
 
 pre {
@@ -28,15 +29,18 @@ h3 {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 45px;
+  width: 90px;
   height: 45px;
-  position: fixed;
-  bottom: 150px;
-  right: 90px;
+  position: absolute;
+  top: 66px;
+  left: 8px;
   z-index: 10;
-  border-radius: 50%;
+  border-radius: 16px;
   padding: 0;
-
+  mat-icon {
+    font-size: 18px;
+    margin-left: .25rem;
+  }
   @media (min-width: 768px) {
     display: none;
   }
@@ -44,7 +48,9 @@ h3 {
 
 .docs-menu-content {
   position: absolute;
-  top: 57.6px;
+  top: 111px;
+  background-color: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
   @media (min-width: 768px) {
     display: block;
     position: static;
@@ -97,6 +103,11 @@ h3 {
 
 .docs-image-box {
   text-align: center;
+  width: 100%;
+  margin: 0 auto;
+  @media (min-width: 576px) {
+    width: 400px;
+  }
   .docs-image {
     width: 100%;
 
