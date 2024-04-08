@@ -1,5 +1,5 @@
 <header class="bg-white border-bottom py-2">
-  <div class="container-fluid">
+  <div class="container">
     <nav class="d-flex align-items-center justify-content-between">
       <a href="/" class="">
         <img
@@ -50,7 +50,7 @@
         routerLink="docs"
         [class.active]="isRouteActive('/docs')"
         (click)="closeEnd(content)"
-        >Docs</a
+        >Documentación</a
       >
     </li>
     <li ngbNavItem>
@@ -60,7 +60,7 @@
         routerLink="about"
         [class.active]="isRouteActive('/about')"
         (click)="closeEnd(content)"
-        >About</a
+        >Sobre Obelisco</a
       >
     </li>
     <li>

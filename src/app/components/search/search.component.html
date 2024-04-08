@@ -1,23 +1,25 @@
-<label for="search" class="visually-hidden">Buscar:</label>
-<input
-  id="search"
-  type="text"
-  class="form-control d-inline-block"
-  [(ngModel)]="model"
-  [ngbTypeahead]="search"
-  (focus)="focus$.next($any($event).target.value)"
-  (click)="click$.next($any($event).target.value)"
-  #instance="ngbTypeahead"
-  placeholder="Buscar.."
-  (keyup.enter)="handleSearch()"
-/>
-<button
-  class="btn btn-secondary btn-search m-0"
-  title="Buscar"
-  (click)="handleSearch()"
->
-  <i class="bx bx-search-alt"></i>
-</button>
+<div class="container-search">
+  <label for="search" class="visually-hidden">Buscar:</label>
+  <input
+    id="search"
+    type="text"
+    class="form-control d-inline-block"
+    [(ngModel)]="model"
+    [ngbTypeahead]="search"
+    (focus)="focus$.next($any($event).target.value)"
+    (click)="click$.next($any($event).target.value)"
+    #instance="ngbTypeahead"
+    placeholder="Buscar.."
+    (keyup.enter)="handleSearch()"
+  />
+  <button
+    class="btn  btn-search m-0"
+    title="Buscar"
+    (click)="handleSearch()"
+  >
+    <span class="btn-search-icon"></span>
+  </button>
+</div>
 
 <ng-container *ngIf="noResults">
   <div class="dropdown-menu show">
