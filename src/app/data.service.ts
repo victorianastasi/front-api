@@ -12,6 +12,6 @@ export class DataService {
   constructor(private http: HttpClient) {}
 
   getData(url: string): Observable<any> {
-    return this.http.get(url);
+    return this.http.get(url, { withCredentials: true });
   }
 }

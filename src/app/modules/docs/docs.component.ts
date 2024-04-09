@@ -32,11 +32,11 @@ export class DocsComponent implements OnInit {
 
     return titleWithoutAccents.toLowerCase().replace(/\s/g, '-');
   }
-  public footerImagesUrl = URL_BASE + '/api/obelisco/footer/images';
+  /* public footerImagesUrl = URL_BASE + '/api/obelisco/footer/images'; */
 
-  public dataImages: any;
+  /* public dataImages: any; */
   ngOnInit() {
-    this.data.getData(this.footerImagesUrl).subscribe(
+   /*  this.data.getData(this.footerImagesUrl).subscribe(
       (data) => {
         console.log('footerImagesUrl' + data);
         console.log(data);
@@ -45,7 +45,7 @@ export class DocsComponent implements OnInit {
       (error) => {
         console.error(error);
       }
-    );
+    ); */
   }
 
   public navigationItems = NAVIGATION_DOCS;

@@ -23,6 +23,11 @@ export class LinksComponent implements OnInit {
       (error) => {
         console.error(error);
         this.isLoading = false;
+        if (error.status === 0) {
+          console.log('Error de CORS: No se pudo acceder al servidor.');
+        } else {
+          console.log('Ocurrió un error al obtener los datos.');
+        }
       }
     );
   }
