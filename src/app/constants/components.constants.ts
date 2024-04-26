@@ -19,33 +19,3 @@ export const DOCS_SEARCH: DocumentData[] = [
   { title: 'Versiones - Listado', route: '/docs/versions/list' },
   { title: 'Versiones - Número de versión', route: '/docs/versions/number' },
 ];
-export const NAVIGATION_DOCS: DocumentData[] = [
-  {
-    title: 'Footer',
-    route: '/docs/footer',
-    id: 'collapseFooter',
-    items: [
-      { title: 'Todos', route: '/docs/footer/all' },
-      { title: 'Imágenes', route: '/docs/footer/images' },
-      { title: 'Enlaces', route: '/docs/footer/links' },
-      { title: 'Teléfonos', route: '/docs/footer/phones' },
-      { title: 'Redes Sociales', route: '/docs/footer/networks' },
-    ],
-  },
-  {
-    title: 'Resolución',
-    route: '/docs/resolution',
-    id: 'collapseResolution',
-    items: [{ title: 'Resolución', route: '/docs/resolution' }],
-  },
-  {
-    title: 'Versiones',
-    route: '/docs/versions',
-    id: 'collapseVersions',
-    items: [
-      { title: 'Todas', route: '/docs/versions/all' },
-      { title: 'Listado', route: '/docs/versions/list' },
-      { title: 'Número de versión', route: '/docs/versions/number' },
-    ],
-  },
-];

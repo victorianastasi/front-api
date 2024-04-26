@@ -1,23 +1,56 @@
-<app-cover></app-cover>
-<div class="container my-5">
-  <div class="row row-cols-1 row-cols-md-3 g-5">
-    <div class="col mt-4">
-      <app-card
+<div class="home-container">
+  <div class="home-header">
+    <div class="logo-box">
+      <img
+        class="logo"
+        src="/assets/app-cuate.svg"
+        alt="Ciudad de buenos aires"
+      />
+    </div>
+    <div class="content-box">
+      <h1>Obelisco-back</h1>
+      <h2 class="text-secondary">
+        La plataforma de documentación para el Backend API de Obelisco
+      </h2>
+      <p class="lead">
+        Explora el Backend API del Gobierno de la Ciudad de Buenos Aires con
+        Obelisco-back. Accede fácilmente a endpoints que proporcionan
+        información actualizada sobre diversos aspectos de la vida en la ciudad.
+      </p>
+      <p class="lead">
+        Simplifica tu desarrollo y crea aplicaciones innovadoras con datos
+        confiables y accesibles.
+      </p>
+      <div class="home-buttons">
+        <a class="btn btn-secondary" routerLink="/docs">Demo</a>
+        <a class="btn btn-primary" routerLink="/about">Comenzar</a>
+      </div>
+      <p class="home-version">Actualmente en v1.0.0</p>
+    </div>
+  </div>
+  <div class="home-description">
+    <div class="card-deck max-cards-3">
+      <o-card
         title="Desarrollo Eficiente"
         description="Una infraestructura de backend diseñada para agilizar el proceso de desarrollo de proyectos."
-      ></app-card>
-    </div>
-    <div class="col mt-4">
-      <app-card
+        route="/components"
+        icon="bx bxs-info-circle"
+        [isBordered]="true"
+      ></o-card>
+      <o-card
         title="Información Accesible"
         description="Simplificamos el acceso a datos en proyectos y activos digitales vinculados con la Ciudad de Buenos Aires."
-      ></app-card>
-    </div>
-    <div class="col mt-4">
-      <app-card
+        route="/components"
+        icon="bx bxs-info-circle"
+        [isBordered]="true"
+      ></o-card>
+      <o-card
         title="Enfoque en la Innovación"
         description="Gestionamos la información para que puedas concentrarte en la innovación y creación de soluciones."
-      ></app-card>
+        route="/components"
+        icon="bx bxs-info-circle"
+        [isBordered]="true"
+      ></o-card>
     </div>
   </div>
 </div>
