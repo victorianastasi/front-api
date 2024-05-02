@@ -15,10 +15,10 @@ import { AboutComponent } from './modules/about/about.component';
 import { DocsComponent } from './modules/docs/docs.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HighlightModule, HIGHLIGHT_OPTIONS } from 'ngx-highlightjs';
-import { ONavbarModule } from '@gcba/ngx-obelisco/navbar';
-import { OFooterComponent } from '@gcba/ngx-obelisco/footer';
-import { OCustomContentDirective } from '@gcba/ngx-obelisco/directives';
-import { ONavModule } from '@gcba/ngx-obelisco/nav';
+import { ONavbarModule } from 'ngx-obelisco-example/navbar';
+import { OFooterComponent } from 'ngx-obelisco-example/footer';
+import { OCustomContentDirective } from 'ngx-obelisco-example/directives';
+import { ONavModule } from 'ngx-obelisco-example/nav';
 
 @NgModule({
   declarations: [

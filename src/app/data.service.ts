@@ -1,17 +1,22 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
-import { URL_BASE } from './constants/components.constants';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Observable, tap } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
 })
 export class DataService {
-  private apiUrl = URL_BASE + '/api/obelisco/footer/images';
-
   constructor(private http: HttpClient) {}
 
   getData(url: string): Observable<any> {
-    return this.http.get(url, { withCredentials: true });
+    const headers = new HttpHeaders({
+      withCredentials: 'http://localhost:3000',
+    });
+
+    return this.http.get(url, { headers }).pipe(
+      tap((data) => {
+        console.log('Data received:', data);
+      })
+    );
   }
 }

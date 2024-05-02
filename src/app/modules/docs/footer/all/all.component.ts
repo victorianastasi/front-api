@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { URL_BASE } from 'src/app/constants/components.constants';
 import { DataService } from 'src/app/data.service';
+import { Observable } from 'rxjs';
+import { tap, catchError, finalize } from 'rxjs/operators';
 
 @Component({
   selector: 'app-all',
@@ -16,18 +18,34 @@ export class AllComponent implements OnInit {
   constructor(private data: DataService) {}
 
   ngOnInit() {
-    this.data.getData(this.footerAllUrl).subscribe(
-      (data) => {
+    this.fetchData().subscribe({
+      next: (data) => {
         this.dataAll = data;
+      },
+      error: (error) => {
+        console.error(error);
+      },
+      complete: () => {
         this.isLoading = false;
       },
-      (error) => {
-        console.error(error);
-        this.isLoading = false;
-      }
-    );
-    console.log(this.dataAll);
+    });
   }
+
+  fetchData(): Observable<any> {
+    return this.data.getData(this.footerAllUrl).pipe(
+      tap(() => {
+        console.log('Data fetched successfully');
+      }),
+      catchError((error) => {
+        console.error('Error fetching data:', error);
+        throw error;
+      }),
+      finalize(() => {
+        console.log('Fetch operation completed');
+      })
+    );
+  }
+
   toggleVisibility() {
     this.shorthandAll = !this.shorthandAll;
   }

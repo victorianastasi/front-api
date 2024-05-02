@@ -21,12 +21,12 @@
     "@angular/platform-browser": "^14.2.0",
     "@angular/platform-browser-dynamic": "^14.2.0",
     "@angular/router": "^14.2.0",
-    "@gcba/ngx-obelisco": "file:gcba-ngx-obelisco-1.0.0.tgz",
     "@ng-bootstrap/ng-bootstrap": "^13.0.0",
     "@popperjs/core": "^2.10.2",
     "bootstrap": "4.6.2",
     "ngx-clipboard": "15.1.0",
     "ngx-highlightjs": "^7.0.0",
+    "ngx-obelisco-example": "^1.0.0",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"

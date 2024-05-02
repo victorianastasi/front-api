@@ -7,8 +7,8 @@
       Puedes acceder a todos los datos utilizando el endpoint
       <span class="fst-italic">/footer/all</span>.
     </p>
-    <div class="code-box bg-dark p-4 text-light rounded-sm">
-      <p class="code-url">
+    <div class="code-box bg-dark text-light rounded">
+      <p class="code-url px-4 pt-4">
         <span>
           <span class="text-green fw-bold pe-2">GET</span>
           <span>
@@ -22,39 +22,31 @@
           [cbContent]="footerAllUrl"
         ></i>
       </p>
-      <hr />
-      <div>
-        <div>
-          <button
-            (click)="toggleVisibility()"
-            class="btn d-flex align-items-center fs-6 justify-content-center ms-auto"
-            style="min-width: 110px"
-            [ngClass]="{
-              'btn-primary': !shorthandAll,
-              'btn-light': shorthandAll
-            }"
-          >
-            <ng-container *ngIf="shorthandAll; else more"
-              >Ver menos <i class="bx bx-minus ps-2"></i
-            ></ng-container>
-            <ng-template #more
-              >Ver más <i class="bx bx-plus ps-2"></i
-            ></ng-template>
-          </button>
-        </div>
-        <div>
-          <ng-container *ngIf="shorthandAll">
-            <pre>{{ dataAll | json }}</pre>
-          </ng-container>
-          <ng-container *ngIf="!shorthandAll">
-            <div class="position-relative">
-              <pre style="max-height: 700px; overflow: hidden">{{
-                dataAll | json
-              }}</pre>
-              <div class="vertical-gradient"></div>
-            </div>
-          </ng-container>
-        </div>
+      <hr class="border-white" />
+
+      <div class="d-flex flex-column">
+        <button
+          (click)="toggleVisibility()"
+          class="btn btn-primary btn-icon ml-auto mr-3"
+          style="min-width: 110px"
+        >
+          <ng-container *ngIf="shorthandAll; else more"
+            >Ver menos <i class="bx bx-minus"></i
+          ></ng-container>
+          <ng-template #more>Ver más <i class="bx bx-plus"></i></ng-template>
+        </button>
+        <ng-container *ngIf="shorthandAll">
+          <pre style="padding: 0px 16px">{{ dataAll | json }}</pre>
+        </ng-container>
+        <ng-container *ngIf="!shorthandAll">
+          <div class="position-relative">
+            <pre
+              style="max-height: 700px; overflow: hidden; padding: 0px 16px"
+              >{{ dataAll | json }}</pre
+            >
+            <div class="vertical-gradient rounded"></div>
+          </div>
+        </ng-container>
       </div>
     </div>
   </section>

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { DataService } from 'src/app/data.service';
 import { Router } from '@angular/router';
-import { NavVerticalItems } from '@gcba/ngx-obelisco/core/models';
+import { NavVerticalItems } from 'ngx-obelisco-example/core/models';
 
 @Component({
   selector: 'app-docs',
@@ -22,10 +22,10 @@ export class DocsComponent {
       icon: 'bx bxs-user-circle',
       children: [
         { title: 'Todos', route: '/docs/footer/all' },
-        { title: 'Imágenes', route: '/docs/footer/images' },
         { title: 'Enlaces', route: '/docs/footer/links' },
         { title: 'Teléfonos', route: '/docs/footer/phones' },
         { title: 'Redes Sociales', route: '/docs/footer/networks' },
+        { title: 'Imágenes', route: '/docs/footer/images' },
       ],
     },
     {
@@ -42,6 +42,22 @@ export class DocsComponent {
         { title: 'Todas', route: '/docs/versions/all' },
         { title: 'Listado', route: '/docs/versions/list' },
         { title: 'Número de versión', route: '/docs/versions/number' },
+      ],
+    },
+    {
+      title: 'Header',
+      route: '/docs/versions',
+      icon: 'bx bxs-user-circle',
+      children: [{ title: 'Images', route: '/docs/versions/all' }],
+    },
+    {
+      title: 'Areas de gobierno',
+      route: '/docs/versions',
+      icon: 'bx bxs-user-circle',
+      children: [
+        { title: 'Todas', route: '/docs/versions/all' },
+        { title: 'Listado', route: '/docs/versions/list' },
+        { title: 'Area', route: '/docs/versions/number' },
       ],
     },
   ];

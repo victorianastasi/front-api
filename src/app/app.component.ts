@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavbarRoute, SearchbarItem } from '@gcba/ngx-obelisco/core/models';
+import { NavbarRoute, SearchbarItem } from 'ngx-obelisco-example/core/models';
 
 @Component({
   selector: 'app-root',
