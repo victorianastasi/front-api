@@ -15,10 +15,7 @@ import { AboutComponent } from './modules/about/about.component';
 import { DocsComponent } from './modules/docs/docs.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HighlightModule, HIGHLIGHT_OPTIONS } from 'ngx-highlightjs';
-import { ONavbarModule } from 'ngx-obelisco-example/navbar';
-import { OFooterComponent } from 'ngx-obelisco-example/footer';
-import { OCustomContentDirective } from 'ngx-obelisco-example/directives';
-import { ONavModule } from 'ngx-obelisco-example/nav';
+import { NgxObeliscoModule } from 'ngx-obelisco-example/ngx-obelisco';
 
 @NgModule({
   declarations: [
@@ -38,11 +35,7 @@ import { ONavModule } from 'ngx-obelisco-example/nav';
     HttpClientModule,
     HighlightModule,
     SpinnerModule,
-    TogglerModule,
-    ONavbarModule,
-    OFooterComponent,
-    OCustomContentDirective,
-    ONavModule,
+    NgxObeliscoModule,
   ],
   providers: [
     {

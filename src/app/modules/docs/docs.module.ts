@@ -7,7 +7,7 @@ import { FooterComponent } from './footer/footer.component';
 import { ResolutionComponent } from './resolution/resolution.component';
 import { VersionsComponent } from './versions/versions.component';
 import { ClipboardModule } from 'ngx-clipboard';
-import { ONavModule } from 'ngx-obelisco-example/nav';
+import { NgxObeliscoModule } from 'ngx-obelisco-example/ngx-obelisco';
 
 @NgModule({
   declarations: [FooterComponent, ResolutionComponent, VersionsComponent],
@@ -16,7 +16,7 @@ import { ONavModule } from 'ngx-obelisco-example/nav';
     HighlightModule,
     DocsRoutingModule,
     ClipboardModule,
-    ONavModule,
+    NgxObeliscoModule,
   ],
   providers: [
     {
