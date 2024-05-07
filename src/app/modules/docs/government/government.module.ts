@@ -13,6 +13,7 @@ import { AreasListComponent } from './areas-list/areas-list.component';
     GovernmentComponent,
     AreasByIdComponent,
     AreasAllDataComponent,
+    AreasListComponent,
   ],
   imports: [CommonModule, GovernmentRoutingModule, CodeViewerComponent],
 })

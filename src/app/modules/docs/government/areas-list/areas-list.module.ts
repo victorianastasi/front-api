@@ -1,15 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { AreasListComponent } from './areas-list.component';
-
-
 
 @NgModule({
-  declarations: [
-    AreasListComponent
-  ],
-  imports: [
-    CommonModule
-  ]
+  declarations: [],
+  imports: [CommonModule],
 })
-export class AreasListModule { }
+export class AreasListModule {}

@@ -18,3 +18,14 @@
     );
   }
 }
+
+.box-code {
+  max-width: 100%;
+  width: 100%;
+  min-width: 100%;
+  text-wrap: wrap;
+
+  pre {
+    text-wrap: wrap;
+  }
+}
