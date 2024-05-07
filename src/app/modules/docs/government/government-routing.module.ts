@@ -1,9 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AreasAllDataComponent } from './areas-all-data/areas-all-data.component';
-import { AreasByIdModule } from './areas-by-id/areas-by-id.module';
-import { AreasComponent } from './areas/areas.component';
 import { AreasByIdComponent } from './areas-by-id/areas-by-id.component';
+import { AreasListComponent } from './areas-list/areas-list.component';
 
 const routes: Routes = [
   {
@@ -15,10 +14,10 @@ const routes: Routes = [
       ),
   },
   {
-    path: 'areas',
-    component: AreasComponent,
+    path: 'areas-list',
+    component: AreasListComponent,
     loadChildren: () =>
-      import('./areas/areas.module').then((m) => m.AreasModule),
+      import('./areas-list/areas-list.module').then((m) => m.AreasListModule),
   },
   {
     path: 'areas-by-id',

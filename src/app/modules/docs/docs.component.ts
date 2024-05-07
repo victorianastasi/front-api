@@ -52,10 +52,10 @@ export class DocsComponent {
     },
     {
       title: 'Areas de gobierno',
-      route: '/docs/government-areas/areas',
+      route: '/docs/government-areas/areas-list',
       icon: 'bx bxs-vector',
       children: [
-        { title: 'Listado', route: '/docs/government-areas/areas' },
+        { title: 'Listado', route: '/docs/government-areas/areas-list' },
         { title: 'Por ID', route: '/docs/government-areas/areas-by-id' },
         { title: 'Todas', route: '/docs/government-areas/all' },
       ],

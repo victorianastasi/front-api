@@ -1,15 +1,15 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { AreasComponent } from './areas.component';
+import { AreasListComponent } from './areas-list.component';
 
 
 
 @NgModule({
   declarations: [
-    AreasComponent
+    AreasListComponent
   ],
   imports: [
     CommonModule
   ]
 })
-export class AreasModule { }
+export class AreasListModule { }
