@@ -19,7 +19,7 @@ export class DocsComponent {
     {
       title: 'Footer',
       route: '/docs/footer/all',
-      icon: 'bx bxs-user-circle',
+      icon: 'bx bx-dock-bottom',
       children: [
         { title: 'Todos', route: '/docs/footer/all' },
         { title: 'Enlaces', route: '/docs/footer/links' },
@@ -31,13 +31,13 @@ export class DocsComponent {
     {
       title: 'Resolución',
       route: '/docs/resolution',
-      icon: 'bx bxs-user-circle',
+      icon: 'bx bxs-file-pdf',
       children: [{ title: 'Resolución', route: '/docs/resolution' }],
     },
     {
       title: 'Versiones',
-      route: '/docs/versions',
-      icon: 'bx bxs-user-circle',
+      route: '/docs/versions/all',
+      icon: 'bx bx-purchase-tag-alt',
       children: [
         { title: 'Todas', route: '/docs/versions/all' },
         { title: 'Listado', route: '/docs/versions/list' },
@@ -47,13 +47,13 @@ export class DocsComponent {
     {
       title: 'Header',
       route: '/docs/versions',
-      icon: 'bx bxs-user-circle',
+      icon: 'bx bx-dock-top',
       children: [{ title: 'Images', route: '/docs/versions/all' }],
     },
     {
       title: 'Areas de gobierno',
       route: '/docs/versions',
-      icon: 'bx bxs-user-circle',
+      icon: 'bx bxs-vector',
       children: [
         { title: 'Todas', route: '/docs/versions/all' },
         { title: 'Listado', route: '/docs/versions/list' },

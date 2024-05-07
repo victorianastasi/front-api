@@ -8,6 +8,7 @@ import { ResolutionComponent } from './resolution/resolution.component';
 import { VersionsComponent } from './versions/versions.component';
 import { ClipboardModule } from 'ngx-clipboard';
 import { NgxObeliscoModule } from 'ngx-obelisco-example/ngx-obelisco';
+import { CodeViewerComponent } from 'src/app/components/code-viewer/code-viewer.component';
 
 @NgModule({
   declarations: [FooterComponent, ResolutionComponent, VersionsComponent],
@@ -17,6 +18,7 @@ import { NgxObeliscoModule } from 'ngx-obelisco-example/ngx-obelisco';
     DocsRoutingModule,
     ClipboardModule,
     NgxObeliscoModule,
+    CodeViewerComponent,
   ],
   providers: [
     {

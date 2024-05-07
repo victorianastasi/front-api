@@ -6,20 +6,11 @@
       Puedes descargar el archivo .pdf utilizando el endpoint
       <span class="fst-italic">/resolution/download</span>.
     </p>
-    <div class="code-box bg-dark p-4 text-light">
-      <p>
-        <span class="text-green fw-bold pe-2">GET</span>
-        <span>{{ resolutionDownloadUrl }}</span>
-      </p>
-      <hr />
-      <div>
-        <pre>
-            <p class="mb-0">&lt;a href="{{ URL_BASE }}/api/obelisco/resolution/download" download&gt;Descargar Resolución&lt;/a&gt;</p></pre>
-      </div>
-      <hr />
-      <p class="fw-bold">Resultado:</p>
-      <a href="{{ resolutionDownloadUrl }}">Descargar Resolución</a>
-    </div>
+
+    <app-code-viewer
+      url="/api/obelisco/resolution/download"
+      [forLink]="true"
+    ></app-code-viewer>
   </section>
 
   <section class="mb-5">
@@ -28,19 +19,10 @@
       Puedes visualizar al archivo .pdf utilizando el endpoint
       <span class="fst-italic">/resolution</span>.
     </p>
-    <div class="code-box bg-dark p-4 text-light">
-      <p>
-        <span class="text-green fw-bold pe-2">GET</span>
-        <span>{{ resolutionUrl }}</span>
-      </p>
-      <hr />
-      <div>
-        <pre>
-              <p class="mb-0">&lt;a href="{{ URL_BASE }}/api/obelisco/resolution"&gt;Visualizar Resolución&lt;/a&gt;</p></pre>
-      </div>
-      <hr />
-      <p class="fw-bold">Resultado:</p>
-      <a href="{{ resolutionUrl }}">Visualizar Resolución</a>
-    </div>
+
+    <app-code-viewer
+      url="/api/obelisco/resolution"
+      [forLink]="true"
+    ></app-code-viewer>
   </section>
 </article>
