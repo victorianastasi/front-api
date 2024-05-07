@@ -46,18 +46,18 @@ export class DocsComponent {
     },
     {
       title: 'Header',
-      route: '/docs/versions',
+      route: '/docs/header/images',
       icon: 'bx bx-dock-top',
-      children: [{ title: 'Images', route: '/docs/versions/all' }],
+      children: [{ title: 'Images', route: '/docs/header/images' }],
     },
     {
       title: 'Areas de gobierno',
-      route: '/docs/versions',
+      route: '/docs/government-areas/areas',
       icon: 'bx bxs-vector',
       children: [
-        { title: 'Todas', route: '/docs/versions/all' },
-        { title: 'Listado', route: '/docs/versions/list' },
-        { title: 'Area', route: '/docs/versions/number' },
+        { title: 'Listado', route: '/docs/government-areas/areas' },
+        { title: 'Por ID', route: '/docs/government-areas/areas-by-id' },
+        { title: 'Todas', route: '/docs/government-areas/all' },
       ],
     },
   ];

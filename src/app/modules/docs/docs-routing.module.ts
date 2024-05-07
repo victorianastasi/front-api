@@ -4,6 +4,8 @@ import { DocsComponent } from './docs.component';
 import { FooterComponent } from './footer/footer.component';
 import { ResolutionComponent } from './resolution/resolution.component';
 import { VersionsComponent } from './versions/versions.component';
+import { HeaderComponent } from './header/header.component';
+import { GovernmentComponent } from './government/government.component';
 
 const routes: Routes = [
   {
@@ -27,6 +29,18 @@ const routes: Routes = [
     component: VersionsComponent,
     loadChildren: () =>
       import('./versions/versions.module').then((m) => m.VersionsModule),
+  },
+  {
+    path: 'header',
+    component: HeaderComponent,
+    loadChildren: () =>
+      import('./header/header.module').then((m) => m.HeaderModule),
+  },
+  {
+    path: 'government-areas',
+    component: GovernmentComponent,
+    loadChildren: () =>
+      import('./government/government.module').then((m) => m.GovernmentModule),
   },
   { path: '**', pathMatch: 'full', redirectTo: '' },
 ];

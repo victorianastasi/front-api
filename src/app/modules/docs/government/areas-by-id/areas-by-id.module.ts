@@ -6,4 +6,4 @@ import { CodeViewerComponent } from 'src/app/components/code-viewer/code-viewer.
   declarations: [],
   imports: [CommonModule, CodeViewerComponent],
 })
-export class AllVersionsModule {}
+export class AreasByIdModule {}

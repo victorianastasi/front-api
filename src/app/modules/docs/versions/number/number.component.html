@@ -7,35 +7,7 @@
       Puedes acceder al listado de las versiones utilizando el endpoint
       <span class="fst-italic">/versions/1.53.0</span>.
     </p>
-    <div class="code-box bg-dark p-4 text-light">
-      <p class="code-url">
-        <span>
-          <span class="text-green fw-bold pe-2">GET</span>
-          <span>
-            {{ versionsNumberUrl }}
-          </span>
-        </span>
-        <i
-          class="bx bx-copy-alt"
-          style="color: #ffffff"
-          ngxClipboard
-          [cbContent]="versionsNumberUrl"
-        ></i>
-      </p>
-      <hr />
-      <div>
-        <pre>{{ dataNumber | json }}</pre>
-      </div>
-      <hr />
-      <p class="fw-bold">Resultado:</p>
-      <div class="my-4 border border-warning border-2 rounded p-3">
-        <p class="text-warning">
-          <span class="fw-bold">Versión:</span>
-          {{ dataNumber.version }} - Fecha: {{ dataNumber.date }}
-        </p>
-        <p>Pull Request: {{ dataNumber.pullRequest }}</p>
-        <p class="mb-0">Modificaciones realizadas: {{ dataNumber.changes }}</p>
-      </div>
-    </div>
+
+    <app-code-viewer url="/api/obelisco/versions/1.53.0"></app-code-viewer>
   </section>
 </article>
