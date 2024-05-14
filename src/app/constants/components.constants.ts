@@ -1,6 +1,6 @@
 // export const URL_BASE = "https://obelisco.com/";
-// export const URL_BASE = 'https://obelisco-back.up.railway.app';
 export const URL_BASE = 'http://localhost:3000';
+// export const URL_BASE = 'https://obelisco-back.up.railway.app';
 
 export interface DocumentData {
   title: string;

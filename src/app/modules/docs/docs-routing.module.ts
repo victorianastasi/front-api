@@ -6,6 +6,7 @@ import { ResolutionComponent } from './resolution/resolution.component';
 import { VersionsComponent } from './versions/versions.component';
 import { HeaderComponent } from './header/header.component';
 import { GovernmentComponent } from './government/government.component';
+import { ImplementationComponent } from './implementation/implementation.component';
 
 const routes: Routes = [
   {
@@ -41,6 +42,14 @@ const routes: Routes = [
     component: GovernmentComponent,
     loadChildren: () =>
       import('./government/government.module').then((m) => m.GovernmentModule),
+  },
+  {
+    path: 'implementation',
+    component: ImplementationComponent,
+    loadChildren: () =>
+      import('./implementation/implementation.module').then(
+        (m) => m.ImplementationModule
+      ),
   },
   { path: '**', pathMatch: 'full', redirectTo: '' },
 ];

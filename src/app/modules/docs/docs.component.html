@@ -1,17 +1,19 @@
 <div class="container-fluid">
   <div class="row">
-    <div class="col-2 bg-light py-3 h-auto">
-      <o-nav-vertical [navVertItems]="introList"></o-nav-vertical>
+    <div class="fix-height col-2 bg-light py-3 h-auto">
+      <o-nav-vertical
+        customClasses="mb-3"
+        [navVertItems]="introList"
+      ></o-nav-vertical>
 
-      <br />
-
-      <o-nav-vertical [navVertItems]="navList"></o-nav-vertical>
-
-      <br />
+      <o-nav-vertical
+        customClasses="mb-3"
+        [navVertItems]="navList"
+      ></o-nav-vertical>
 
       <o-nav-vertical [navVertItems]="howToList"></o-nav-vertical>
     </div>
-    <div class="col-10 px-0 pr-3 py-3 bg-light">
+    <div class="fix-height col-10 px-0 pr-3 py-3 bg-light">
       <div class="bg-white pt-4 pb-1 px-4 rounded-lg box-container">
         <router-outlet></router-outlet>
         <div *ngIf="isRouteActive('/docs')" class="col">

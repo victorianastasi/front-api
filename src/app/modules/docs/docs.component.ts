@@ -18,8 +18,8 @@ export class DocsComponent {
   public introList: NavVerticalItems[] = [
     {
       title: 'Introducción',
-      route: '/docs',
-      icon: 'bx bx-dock-bottom',
+      route: '/docs/introduction',
+      icon: 'bx bx-home',
     },
   ];
 
@@ -73,15 +73,14 @@ export class DocsComponent {
   public howToList: NavVerticalItems[] = [
     {
       title: 'Implementacion',
-      route: '/docs/footer/all',
-      icon: 'bx bx-dock-bottom',
+      route: '/docs/implementation/javascript',
+      icon: 'bx bx-code-alt',
       children: [
-        { title: 'Javascript', route: '/docs/footer/all' },
-        { title: 'React', route: '/docs/footer/networks' },
-        { title: 'Angular', route: '/docs/footer/phones' },
-        { title: 'Dart', route: '/docs/footer/images' },
-        { title: 'Flutter', route: '/docs/footer/images' },
-        { title: 'Php', route: '/docs/footer/links' },
+        { title: 'Javascript', route: '/docs/implementation/javascript' },
+        { title: 'React', route: '/docs/implementation/react' },
+        { title: 'Angular', route: '/docs/implementation/angular' },
+        { title: 'Flutter', route: '/docs/implementation/flutter' },
+        { title: 'PHP', route: '/docs/implementation/php' },
       ],
     },
   ];
