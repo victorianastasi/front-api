@@ -2,10 +2,8 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { MatIconModule } from '@angular/material/icon';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './components/header/header.component';
 import { SpinnerModule } from './components/spinner/spinner.module';
 import { FooterElementComponent } from './components/footer-element/footer-element.component';
 import { TogglerModule } from './components/toggler/toggler.module';
@@ -17,16 +15,15 @@ import { AboutComponent } from './modules/about/about.component';
 import { DocsComponent } from './modules/docs/docs.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HighlightModule, HIGHLIGHT_OPTIONS } from 'ngx-highlightjs';
-
+import { NgxObeliscoModule } from 'ngx-obelisco-example/ngx-obelisco';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
     SearchComponent,
     AboutComponent,
     DocsComponent,
-    FooterElementComponent
+    FooterElementComponent,
   ],
   imports: [
     BrowserModule,
@@ -38,16 +35,16 @@ import { HighlightModule, HIGHLIGHT_OPTIONS } from 'ngx-highlightjs';
     HttpClientModule,
     HighlightModule,
     SpinnerModule,
-    TogglerModule
+    NgxObeliscoModule,
   ],
   providers: [
     {
       provide: HIGHLIGHT_OPTIONS,
       useValue: {
-        coreLibraryLoader: () => import('highlight.js/lib/core')
+        coreLibraryLoader: () => import('highlight.js/lib/core'),
       },
     },
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

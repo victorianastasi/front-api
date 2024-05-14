@@ -1,117 +1,12 @@
 <article>
   <h2 class="items-titles">Versiones - Todos los datos</h2>
-  <app-spinner [loading]="isLoading"></app-spinner>
-  <section *ngIf="!isLoading" class="mb-5">
+  <section class="mb-5">
     <h3>Obtén todos los datos</h3>
     <p>
       Puedes acceder a todos los datos utilizando el endpoint
       <span class="fst-italic">/versions/all</span>.
     </p>
-    <div class="code-box bg-dark p-4 text-light">
-      <p class="code-url">
-        <span>
-          <span class="text-green fw-bold pe-2">GET</span>
-          <span>
-            {{ versionsAllUrl }}
-          </span>
-        </span>
-        <i
-          class="bx bx-copy-alt"
-          style="color: #ffffff"
-          ngxClipboard
-          [cbContent]="versionsAllUrl"
-        ></i>
-      </p>
-      <hr />
-      <app-toggler-code
-        [shorthand]="shorthandList"
-        (toggle)="toggleList()"
-        [fullData]="dataAll"
-      ></app-toggler-code>
-      <hr />
-      <p class="fw-bold">Resultado:</p>
-      <div>
-        <button
-          (click)="toggleExampleAll()"
-          class="btn d-flex align-items-center fs-6 justify-content-center ms-auto"
-          style="min-width: 110px"
-          [ngClass]="{
-            'btn-primary': !shorthandExampleAll,
-            'btn-light': shorthandExampleAll
-          }"
-        >
-          <ng-container *ngIf="shorthandExampleAll; else more"
-            >Ver menos <i class="bx bx-minus ps-2"></i
-          ></ng-container>
-          <ng-template #more
-            >Ver más <i class="bx bx-plus ps-2"></i
-          ></ng-template>
-        </button>
-      </div>
-      <div>
-        <div class="position-relative">
-          <ng-container *ngFor="let data of dataAll; let i = index">
-            <ng-container *ngIf="shorthandExampleAll; else templateBlock">
-              <ng-container
-                *ngTemplateOutlet="dataTemplate; context: { data: data }"
-              ></ng-container>
-            </ng-container>
-            <ng-template #templateBlock>
-              <ng-container *ngIf="i < 3">
-                <ng-container
-                  *ngTemplateOutlet="dataTemplate; context: { data: data }"
-                ></ng-container>
-                <ng-container *ngIf="i === 0">
-                  <div class="vertical-gradient"></div>
-                </ng-container>
-              </ng-container>
-            </ng-template>
-          </ng-container>
-        </div>
-      </div>
 
-      <ng-template #dataTemplate let-data="data">
-        <div class="my-4 border border-info border-2 rounded p-3">
-          <p class="text-info d-flex justify-content-between">
-            <span class="fw-bold">Versión: {{ data.version }}</span>
-            <span class="text-secondary">Fecha: {{ data.date }}</span>
-          </p>
-          <p>
-            <span class="text-info">Pull Request:</span> {{ data.pullRequest }}
-          </p>
-          <div>
-            <span class="text-info">Modificaciones realizadas: </span>
-            <ng-container *ngIf="data.changes.length > 1; else onlyChange">
-              <ul>
-                <ng-container *ngFor="let change of data.changes">
-                  <li>{{ change }}</li>
-                </ng-container>
-              </ul>
-            </ng-container>
-            <ng-template #onlyChange>
-              <span>{{ data.changes }}</span>
-            </ng-template>
-          </div>
-          <ng-container *ngIf="data.other">
-            <ng-container *ngFor="let other of data.other">
-              <span class="text-info mb-2">Información complementaria: </span>
-              <p class="mb-0">Versión: {{ other.version }}</p>
-              <p class="mb-0">Fecha: {{ other.date }}</p>
-              <p class="d-inline-block mb-0">Modificaciones:</p>
-              <ng-container *ngIf="other.changes > 1; else onlyOtherChange">
-                <ul>
-                  <ng-container *ngFor="let change of other.changes">
-                    <li>{{ change }}</li>
-                  </ng-container>
-                </ul>
-              </ng-container>
-              <ng-template #onlyOtherChange>
-                <span> {{ other.changes }}</span>
-              </ng-template>
-            </ng-container>
-          </ng-container>
-        </div>
-      </ng-template>
-    </div>
+    <app-code-viewer url="/api/obelisco/versions/all"></app-code-viewer>
   </section>
 </article>

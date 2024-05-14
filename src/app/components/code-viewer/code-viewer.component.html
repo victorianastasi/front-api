@@ -1,0 +1,100 @@
+<div *ngIf="!forImage && !forPdf" class="code-box bg-dark text-light rounded">
+  <p class="code-url px-4 pt-4">
+    <span>
+      <span class="text-green fw-bold pr-2">GET</span>
+      <span>
+        {{ allUrl }}
+      </span>
+    </span>
+    <i
+      class="bx bx-copy-alt"
+      style="color: #ffffff"
+      ngxClipboard
+      [cbContent]="allUrl"
+    ></i>
+  </p>
+  <hr class="border-white" />
+
+  <div class="d-flex flex-column box-code">
+    <button
+      (click)="toggleVisibility()"
+      class="btn btn-primary btn-icon ml-auto mr-3"
+      style="min-width: 110px"
+    >
+      <ng-container *ngIf="shorthandAll; else more"
+        >Ver menos <i class="bx bx-minus"></i
+      ></ng-container>
+      <ng-template #more>Ver más <i class="bx bx-plus"></i></ng-template>
+    </button>
+    <ng-container *ngIf="shorthandAll">
+      <pre style="padding: 0px 32px 32px 32px; color: white">{{
+        dataAll | json
+      }}</pre>
+    </ng-container>
+    <ng-container *ngIf="!shorthandAll">
+      <div class="position-relative">
+        <pre
+          style="
+            width: 100%;
+            max-height: 700px;
+            overflow: hidden;
+            padding: 0px 32px 32px 32px;
+            color: white;
+          "
+          >{{ dataAll | json }}</pre
+        >
+        <div class="vertical-gradient rounded"></div>
+      </div>
+    </ng-container>
+  </div>
+</div>
+
+<div *ngIf="forImage" class="code-box bg-dark text-light">
+  <p class="code-url px-4 pt-4">
+    <span>
+      <span class="text-green fw-bold pr-2">GET</span>
+      <span> {{ URL_BASE }}{{ url }} </span>
+    </span>
+    <i
+      class="bx bx-copy-alt"
+      style="color: #ffffff"
+      ngxClipboard
+      [cbContent]="dataAll"
+    ></i>
+  </p>
+  <hr class="border-white" />
+  <div class="p-4">
+    <div class="mb-0">
+      <pre><p class="mb-0 text-white">&lt;img src="{{ URL_BASE }}{{url}}" alt=""&gt;</p></pre>
+    </div>
+    <hr class="border-white" />
+    <p class="fw-bold">Resultado:</p>
+    <div class="text-center my-4">
+      <img src="{{ URL_BASE + url }}" alt="" />
+    </div>
+  </div>
+</div>
+
+<div *ngIf="forPdf" class="code-box bg-dark text-light">
+  <p class="code-url px-4 pt-4">
+    <span>
+      <span class="text-green fw-bold pr-2">GET</span>
+      <span> {{ URL_BASE }}{{ url }} </span>
+    </span>
+    <i
+      class="bx bx-copy-alt"
+      style="color: #ffffff"
+      ngxClipboard
+      [cbContent]="dataAll"
+    ></i>
+  </p>
+  <hr class="border-white" />
+  <div class="px-4 pb-4">
+    <div>
+      <pre><p class="mb-0 text-white">&lt;a href="{{ URL_BASE }}/api/obelisco/resolution/download" download&gt;Descargar Resolución&lt;/a&gt;</p></pre>
+    </div>
+    <hr class="border-white" />
+    <p class="fw-bold">Resultado:</p>
+    <a class="text-blue" href="{{ allUrl }}">Descargar Resolución</a>
+  </div>
+</div>

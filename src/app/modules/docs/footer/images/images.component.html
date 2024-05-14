@@ -1,32 +1,13 @@
 <article>
   <h2 class="items-titles">Footer - Imágenes</h2>
-  <app-spinner [loading]="isLoading"></app-spinner>
   <section class="mb-5">
     <h3>Obtén todas las imágenes</h3>
     <p>
       Puedes acceder a la lista de imágenes utilizando el endpoint
       <span class="fst-italic">/footer/images</span>.
     </p>
-    <div class="code-box bg-dark p-4 text-light">
-      <p class="code-url">
-        <span>
-          <span class="text-green fw-bold pe-2">GET</span>
-          <span>
-            {{ footerImagesUrl }}
-          </span>
-        </span>
-        <i
-          class="bx bx-copy-alt"
-          style="color: #ffffff"
-          ngxClipboard
-          [cbContent]="footerImagesUrl"
-        ></i>
-      </p>
-      <hr />
-      <div>
-        <pre>{{ dataImages | json }}</pre>
-      </div>
-    </div>
+
+    <app-code-viewer url="/api/obelisco/footer/images"></app-code-viewer>
   </section>
 
   <section class="mb-4">
@@ -35,32 +16,10 @@
       Puedes obtener una única imagen agregando el ID como parámetro:
       <span class="fst-italic">/footer/images/1</span>
     </p>
-    <div class="code-box bg-dark p-4 text-light">
-      <p class="code-url">
-        <span>
-          <span class="text-green fw-bold pe-2">GET</span>
-          <span>
-            {{ footerImagesUrl1 }}
-          </span>
-        </span>
-        <i
-          class="bx bx-copy-alt"
-          style="color: #ffffff"
-          ngxClipboard
-          [cbContent]="footerImagesUrl1"
-        ></i>
-      </p>
-      <hr />
-      <div>
-        <pre>
-          <p class="mb-0">&lt;img src="{{ URL_BASE }}/api/obelisco/footer/images/1" alt=""&gt;</p>
-        </pre>
-      </div>
-      <hr />
-      <p class="fw-bold">Resultado:</p>
-      <div class="text-center my-4">
-        <img src="{{ footerImagesUrl1 }}" alt="" />
-      </div>
-    </div>
+
+    <app-code-viewer
+      url="/api/obelisco/footer/images/1"
+      [forImage]="true"
+    ></app-code-viewer>
   </section>
 </article>

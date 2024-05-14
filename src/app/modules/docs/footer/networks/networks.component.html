@@ -1,6 +1,5 @@
 <article>
   <h2 class="items-titles">Footer - Redes sociales</h2>
-  <app-spinner [loading]="isLoading"></app-spinner>
   <section class="mb-5">
     <h3>Obtén todos las redes sociales</h3>
     <p>
@@ -8,35 +7,6 @@
       <span class="fst-italic">/footer/networks</span>.
     </p>
 
-    <div class="code-box bg-dark p-4 text-light">
-      <p class="code-url">
-        <span>
-          <span class="text-green fw-bold pe-2">GET</span>
-          <span>
-            {{ footerNetworksUrl }}
-          </span>
-        </span>
-        <i
-          class="bx bx-copy-alt"
-          style="color: #ffffff"
-          ngxClipboard
-          [cbContent]="footerNetworksUrl"
-        ></i>
-      </p>
-      <hr />
-      <div>
-        <pre>{{ dataNetworks | json }}</pre>
-      </div>
-      <hr />
-      <p class="fw-bold">Resultado:</p>
-      <div class="my-4 border border-light border-2 rounded p-3 bg-light">
-        <div *ngFor="let network of dataNetworks">
-          <a href="{{ network.url }}" class="text-decoration-none">
-            <i class="{{ network.icon }}"></i>
-            {{ network.title }}
-          </a>
-        </div>
-      </div>
-    </div>
+    <app-code-viewer url="/api/obelisco/footer/networks"></app-code-viewer>
   </section>
 </article>

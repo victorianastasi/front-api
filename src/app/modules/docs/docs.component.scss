@@ -39,7 +39,7 @@ h3 {
   padding: 0;
   mat-icon {
     font-size: 18px;
-    margin-left: .25rem;
+    margin-left: 0.25rem;
   }
   @media (min-width: 768px) {
     display: none;
@@ -61,7 +61,7 @@ h3 {
   .nav-link {
     color: rgb(117, 117, 128);
     margin: 0.25rem 0;
-    transition: all 0.2s  ease-in-out;
+    transition: all 0.2s ease-in-out;
     &:hover {
       background-color: rgba(0, 123, 199, 0.05);
       color: darkslategray;
@@ -135,5 +135,21 @@ h3 {
       rgba(33, 37, 41, 0),
       rgba(33, 37, 41, 0.3)
     );
+  }
+}
+
+.box-container {
+  min-height: 800px;
+}
+
+.back-nav {
+  @media screen and (max-width: 975px) {
+    display: none;
+  }
+}
+
+.back-content {
+  @media screen and (max-width: 975px) {
+    padding-left: 16px !important;
   }
 }

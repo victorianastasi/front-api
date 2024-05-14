@@ -1,19 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HomeComponent } from './home.component';
-import { CoverComponent } from 'src/app/components/cover/cover.component';
-import { CardComponent } from 'src/app/components/card/card.component';
-
-
+import { NgxObeliscoModule } from 'ngx-obelisco-example/ngx-obelisco';
 
 @NgModule({
-  declarations: [
-    HomeComponent, 
-    CoverComponent,
-    CardComponent
-  ],
-  imports: [
-    CommonModule
-  ]
+  declarations: [HomeComponent],
+  imports: [CommonModule, NgxObeliscoModule],
 })
-export class HomeModule { }
+export class HomeModule {}

@@ -8,6 +8,7 @@ import { LinksComponent } from './links/links.component';
 import { NetworksComponent } from './networks/networks.component';
 import { SpinnerModule } from 'src/app/components/spinner/spinner.module';
 import { ClipboardModule } from 'ngx-clipboard';
+import { CodeViewerComponent } from '../../../components/code-viewer/code-viewer.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,12 @@ import { ClipboardModule } from 'ngx-clipboard';
     LinksComponent,
     NetworksComponent,
   ],
-  imports: [CommonModule, FooterRoutingModule, SpinnerModule, ClipboardModule],
+  imports: [
+    CommonModule,
+    FooterRoutingModule,
+    SpinnerModule,
+    ClipboardModule,
+    CodeViewerComponent,
+  ],
 })
 export class FooterModule {}
