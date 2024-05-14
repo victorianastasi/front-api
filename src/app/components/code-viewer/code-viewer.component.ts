@@ -16,7 +16,7 @@ import { PdfService } from 'src/app/services/request-pdf/pdf.service';
 export class CodeViewerComponent implements OnInit {
   @Input() url!: string;
   @Input() forImage: boolean = false;
-  @Input() forLink: boolean = false;
+  @Input() forPdf: boolean = false;
 
   public URL_BASE = URL_BASE;
   public allUrl: string = '';
@@ -39,7 +39,7 @@ export class CodeViewerComponent implements OnInit {
 
     if (this.forImage) {
       this.fetchImage();
-    } else if (this.forLink) {
+    } else if (this.forPdf) {
       this.fetchPdf();
     } else {
       this.fetchData();
