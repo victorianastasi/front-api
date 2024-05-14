@@ -141,3 +141,15 @@ h3 {
 .box-container {
   min-height: 800px;
 }
+
+.back-nav {
+  @media screen and (max-width: 975px) {
+    display: none;
+  }
+}
+
+.back-content {
+  @media screen and (max-width: 975px) {
+    padding-left: 16px !important;
+  }
+}

@@ -41,6 +41,12 @@
           height: 38vw;
           width: 38vw;
         }
+
+        @media screen and (max-width: 425px) {
+          height: 50vw;
+          width: 100vw;
+          margin: 0px !important;
+        }
       }
 
       .content-box {
