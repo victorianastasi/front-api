@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { DataService } from 'src/app/data.service';
+import { DataService } from 'src/app/services/request-data/data.service';
 import { Router } from '@angular/router';
 import { NavVerticalItems } from 'ngx-obelisco-example/core/models';
 

@@ -26,7 +26,7 @@
     "bootstrap": "4.6.2",
     "ngx-clipboard": "15.1.0",
     "ngx-highlightjs": "^7.0.0",
-    "ngx-obelisco-example": "1.1.1",
+    "ngx-obelisco-example": "^1.1.1",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"

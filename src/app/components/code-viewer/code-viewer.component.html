@@ -1,7 +1,7 @@
 <div *ngIf="!forImage && !forLink" class="code-box bg-dark text-light rounded">
   <p class="code-url px-4 pt-4">
     <span>
-      <span class="text-success fw-bold pr-2">GET</span>
+      <span class="text-green fw-bold pr-2">GET</span>
       <span>
         {{ allUrl }}
       </span>
@@ -52,7 +52,7 @@
 <div *ngIf="forImage" class="code-box bg-dark text-light">
   <p class="code-url px-4 pt-4">
     <span>
-      <span class="text-success fw-bold pr-2">GET</span>
+      <span class="text-green fw-bold pr-2">GET</span>
       <span> {{ URL_BASE }}{{ url }} </span>
     </span>
     <i
@@ -76,9 +76,17 @@
 </div>
 
 <div *ngIf="forLink" class="code-box bg-dark text-light">
-  <p class="px-4 pt-4">
-    <span class="text-success fw-bold pr-2">GET</span>
-    <span>{{ allUrl }}</span>
+  <p class="code-url px-4 pt-4">
+    <span>
+      <span class="text-green fw-bold pr-2">GET</span>
+      <span> {{ URL_BASE }}{{ url }} </span>
+    </span>
+    <i
+      class="bx bx-copy-alt"
+      style="color: #ffffff"
+      ngxClipboard
+      [cbContent]="dataAll"
+    ></i>
   </p>
   <hr class="border-white" />
   <div class="px-4 pb-4">
@@ -87,6 +95,6 @@
     </div>
     <hr class="border-white" />
     <p class="fw-bold">Resultado:</p>
-    <a href="{{ allUrl }}">Descargar Resolución</a>
+    <a class="text-blue" href="{{ allUrl }}">Descargar Resolución</a>
   </div>
 </div>
