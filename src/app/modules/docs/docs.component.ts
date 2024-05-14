@@ -15,6 +15,14 @@ export class DocsComponent {
     return this.router.url === route;
   }
 
+  public introList: NavVerticalItems[] = [
+    {
+      title: 'Introducción',
+      route: '/docs',
+      icon: 'bx bx-dock-bottom',
+    },
+  ];
+
   public navList: NavVerticalItems[] = [
     {
       title: 'Footer',
@@ -58,6 +66,22 @@ export class DocsComponent {
         { title: 'Listado', route: '/docs/government-areas/areas-list' },
         { title: 'Por ID', route: '/docs/government-areas/areas-by-id' },
         { title: 'Todas', route: '/docs/government-areas/all' },
+      ],
+    },
+  ];
+
+  public howToList: NavVerticalItems[] = [
+    {
+      title: 'Implementacion',
+      route: '/docs/footer/all',
+      icon: 'bx bx-dock-bottom',
+      children: [
+        { title: 'Javascript', route: '/docs/footer/all' },
+        { title: 'React', route: '/docs/footer/networks' },
+        { title: 'Angular', route: '/docs/footer/phones' },
+        { title: 'Dart', route: '/docs/footer/images' },
+        { title: 'Flutter', route: '/docs/footer/images' },
+        { title: 'Php', route: '/docs/footer/links' },
       ],
     },
   ];
