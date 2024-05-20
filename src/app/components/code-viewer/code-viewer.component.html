@@ -1,3 +1,4 @@
+<!-- Para el caso de visualización de datos -->
 <div *ngIf="!forImage && !forPdf" class="code-box bg-dark text-light rounded">
   <p class="code-url px-4 pt-4">
     <span>
@@ -15,7 +16,17 @@
   </p>
   <hr class="border-white" />
 
-  <div class="d-flex flex-column box-code">
+  <div *ngIf="isLoading" class="text-center my-4 pt-4 pb-5">
+    <div class="spinner-border text-secondary spinner-border-lg" role="status">
+      <span class="sr-only">Cargando...</span>
+    </div>
+  </div>
+
+  <div
+    [@fadeInOut]="isLoading ? 'void' : 'visible'"
+    class="d-flex flex-column box-code"
+    [hidden]="isLoading"
+  >
     <button
       (click)="toggleVisibility()"
       class="btn btn-primary btn-icon ml-auto mr-3"
@@ -63,7 +74,14 @@
     ></i>
   </p>
   <hr class="border-white" />
-  <div class="p-4">
+
+  <div *ngIf="isLoading" class="text-center my-4 pt-4 pb-5">
+    <div class="spinner-border text-secondary spinner-border-lg" role="status">
+      <span class="sr-only">Cargando...</span>
+    </div>
+  </div>
+
+  <div class="p-4" [hidden]="isLoading">
     <div class="mb-0">
       <pre><p class="mb-0 text-white">&lt;img src="{{ URL_BASE }}{{url}}" alt=""&gt;</p></pre>
     </div>
@@ -89,7 +107,14 @@
     ></i>
   </p>
   <hr class="border-white" />
-  <div class="px-4 pb-4">
+
+  <div *ngIf="isLoading" class="text-center my-4 pt-4 pb-5">
+    <div class="spinner-border text-secondary spinner-border-lg" role="status">
+      <span class="sr-only">Cargando...</span>
+    </div>
+  </div>
+
+  <div class="px-4 pb-4" [hidden]="isLoading">
     <div>
       <pre><p class="mb-0 text-white">&lt;a href="{{ URL_BASE }}/api/obelisco/resolution/download" download&gt;Descargar Resolución&lt;/a&gt;</p></pre>
     </div>

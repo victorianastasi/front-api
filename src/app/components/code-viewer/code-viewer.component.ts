@@ -1,3 +1,10 @@
+import {
+  trigger,
+  state,
+  style,
+  transition,
+  animate,
+} from '@angular/animations';
 import { CommonModule } from '@angular/common';
 import { Component, Input, OnInit } from '@angular/core';
 import { ClipboardModule } from 'ngx-clipboard';
@@ -12,6 +19,17 @@ import { PdfService } from 'src/app/services/request-pdf/pdf.service';
   imports: [CommonModule, ClipboardModule],
   templateUrl: './code-viewer.component.html',
   styleUrls: ['./code-viewer.component.scss'],
+  animations: [
+    trigger('fadeInOut', [
+      state(
+        'void',
+        style({
+          opacity: 0,
+        })
+      ),
+      transition('void <=> *', animate(500)),
+    ]),
+  ],
 })
 export class CodeViewerComponent implements OnInit {
   @Input() url!: string;
