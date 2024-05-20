@@ -22,7 +22,20 @@
     </div>
   </div>
 
+  <ng-container *ngIf="shortVersion">
+    <div
+      [@fadeInOut]="isLoading ? 'void' : 'visible'"
+      class="d-flex flex-column box-code"
+      [hidden]="isLoading"
+    >
+      <pre style="padding: 32px 32px 32px 32px; color: white">{{
+        dataAll | json
+      }}</pre>
+    </div>
+  </ng-container>
+
   <div
+    *ngIf="!shortVersion"
     [@fadeInOut]="isLoading ? 'void' : 'visible'"
     class="d-flex flex-column box-code"
     [hidden]="isLoading"

@@ -35,6 +35,7 @@ export class CodeViewerComponent implements OnInit {
   @Input() url!: string;
   @Input() forImage: boolean = false;
   @Input() forPdf: boolean = false;
+  @Input() shortVersion: boolean = false;
 
   public URL_BASE = URL_BASE;
   public allUrl: string = '';
