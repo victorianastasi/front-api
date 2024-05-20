@@ -18,7 +18,7 @@ import { Observable } from 'rxjs';
 export class DataService {
   constructor(private http: HttpClient) { }
 
-  fetchData(): Observable&lt;any&gt; {
+  fetchData(): Observable<any> {
     return this.http.get('${URL_BASE}/api/obelisco/footer/phones');
   }
 }`;
