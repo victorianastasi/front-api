@@ -29,8 +29,12 @@
           alt: 'descripción de imagen'
         }"
       >
-        <o-button #children link="#" size="lg"></o-button>
-        <o-button #children link="#" size="lg" type="secondary"></o-button>
+        <o-button
+          #children
+          link="#"
+          size="lg"
+          text="Explorar sistema"
+        ></o-button>
       </o-highlighted>
 
       <o-highlighted
@@ -45,8 +49,12 @@
           alt: 'descripción de imagen'
         }"
       >
-        <o-button #children link="#" size="lg"></o-button>
-        <o-button #children link="#" size="lg" type="secondary"></o-button>
+        <o-button
+          #children
+          link="#"
+          size="lg"
+          text="Conocer componentes"
+        ></o-button>
       </o-highlighted>
 
       <o-highlighted
@@ -69,6 +77,7 @@
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Enlace de descarga de UI KIT."
+          type="secondary"
         ></o-button>
       </o-highlighted>
     </section>
@@ -104,3 +113,76 @@
     </section>
   </div>
 </div>
+<o-footer>
+  <ng-container *oCustomContent>
+    <section class="footer-legal-section">
+      <h3 class="sr-only">Información gubernamental</h3>
+      <div class="row align-items-center">
+        <div class="col-12 col-md-5 col-xl-4 footer-content-img">
+          <img
+            class="d-lg-none"
+            src="https://gcba.github.io/Obelisco/footer/ciudad-ba-sm.svg"
+            alt="Logo de Ciudad de Buenos Aires"
+            height="48"
+          />
+          <img
+            class="d-none d-lg-inline"
+            src="https://gcba.github.io/Obelisco/footer/ciudad-ba.svg"
+            alt="Logo de Ciudad de Buenos Aires"
+            height="40"
+          />
+          <img
+            class="img-vamos-ba"
+            src="https://gcba.github.io/Obelisco/footer/vamos-ba.svg"
+            alt="Logo de Vamos Buenos Aires"
+          />
+        </div>
+      </div>
+    </section>
+    <p>
+      <small>
+        Diseñado y construido por el equipo de
+        <a
+          href="https://github.com/gcba/ngx-obelisco"
+          rel="noopener"
+          target="_blank"
+          >Ngx-obelisco</a
+        >
+        con la ayuda de nuestros
+        <a
+          href="https://github.com/gcba/ngx-obelisco/blob/main/CONTRIBUTING.md"
+          rel="noopener"
+          target="_blank"
+          >contribuidores</a
+        >.
+      </small>
+    </p>
+    <p>
+      <small>Código licenciado bajo las condiciones de la licencia MIT.</small>
+    </p>
+    <p>
+      <small>
+        El diseño y el contenido del sitio de documentación están fuertemente
+        inspirados en el diseño original de
+        <a href="https://getbootstrap.com/" rel="noopener" target="_blank">
+          Bootstrap</a
+        >.
+      </small>
+    </p>
+    <p>
+      <small>
+        Iconos hechos por
+        <a href="https://boxicons.com/" rel="noopener" target="_blank"
+          >Boxicons</a
+        >
+        y
+        <a
+          href="https://fonts.google.com/icons?selected=Material+Icons+Round"
+          rel="noopener"
+          target="_blank"
+          >Material Icons Round</a
+        >.
+      </small>
+    </p>
+  </ng-container>
+</o-footer>
