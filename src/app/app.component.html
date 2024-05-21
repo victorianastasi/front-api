@@ -2,7 +2,14 @@
   id="navbarFive"
   [searchbarItems]="searchbarItems"
   [routes]="routes"
-  src="https://buenosaires.gob.ar/assets/img/logos/LogoBA.svg"
+  [logo]="{
+    route: '/',
+    src: 'assets/logo-obelisco.svg',
+    alt: 'Gobierno de la Ciudad de Buenos Aires - Inicio',
+    customClasses: 'logo-size',
+    width: '130',
+    height: '40'
+  }"
 ></o-navbar>
 <main>
   <router-outlet></router-outlet>
