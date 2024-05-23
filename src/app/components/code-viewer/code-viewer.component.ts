@@ -46,7 +46,7 @@ export class CodeViewerComponent implements OnInit {
   public pdf: any;
 
   constructor(
-    private data: DataService,
+    private dataService: DataService,
     private imageService: ImageService,
     private pdfService: PdfService
   ) {
@@ -66,7 +66,7 @@ export class CodeViewerComponent implements OnInit {
   }
 
   fetchData(): void {
-    this.data.getData(this.allUrl).subscribe({
+    this.dataService.getData(this.allUrl).subscribe({
       next: (data) => {
         this.dataAll = data;
       },
