@@ -1,7 +1,7 @@
 <!-- Para el caso de visualización de datos -->
 <div *ngIf="!forImage && !forPdf" class="code-box bg-dark text-light rounded">
   <p class="code-url px-4 pt-4">
-    <span>
+    <span class="get">
       <span class="text-green fw-bold pr-2">GET</span>
       <span>
         {{ allUrl }}
@@ -42,7 +42,7 @@
   >
     <button
       (click)="toggleVisibility()"
-      class="btn btn-primary btn-icon ml-auto mr-3"
+      class="btn btn-primary btn-icon ml-auto mr-3 more"
       style="min-width: 110px"
     >
       <ng-container *ngIf="shorthandAll; else more"
@@ -51,13 +51,14 @@
       <ng-template #more>Ver más <i class="bx bx-plus"></i></ng-template>
     </button>
     <ng-container *ngIf="shorthandAll">
-      <pre style="padding: 0px 32px 32px 32px; color: white">{{
+      <pre class="pre-code" style="padding: 0px 32px 32px 32px; color: white">{{
         dataAll | json
       }}</pre>
     </ng-container>
     <ng-container *ngIf="!shorthandAll">
       <div class="position-relative">
         <pre
+          class="pre-code"
           style="
             width: 100%;
             max-height: 700px;
@@ -136,3 +137,4 @@
     <a class="text-blue" href="{{ allUrl }}">Descargar Resolución</a>
   </div>
 </div>
+

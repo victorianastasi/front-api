@@ -32,6 +32,28 @@ body {
   i {
     cursor: pointer;
   }
+
+  @media screen and (max-width: 975px) {
+    padding: 8px !important;
+
+    .get {
+      display: flex;
+      flex-direction: column;
+      span {
+        word-break: break-all;
+      }
+    }
+    i {
+      margin-left: 8px;
+    }
+  }
+}
+.pre-code {
+  padding: 8px !important;
+}
+
+.more {
+  margin-right: 8px !important;
 }
 
 .text-green {
@@ -51,6 +73,10 @@ body {
 
 ::-webkit-scrollbar {
   width: 6px;
+
+  @media screen and (max-width: 975px) {
+    width: 0px;
+  }
 }
 
 ::-webkit-scrollbar-thumb {
