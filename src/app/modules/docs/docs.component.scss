@@ -143,8 +143,20 @@ h3 {
 }
 
 .back-nav {
-  @media screen and (max-width: 975px) {
+  @media screen and (min-width: 976px) {
+    min-height: calc(100vh - 80px);
+    max-height: calc(100vh - 80px);
+    overflow: auto;
+  }
+}
+::ng-deep .btn-categories {
+  @media screen and (min-width: 976px) {
     display: none;
+  }
+}
+.menu-categories {
+  @media screen and (min-width: 976px) {
+    display: block;
   }
 }
 

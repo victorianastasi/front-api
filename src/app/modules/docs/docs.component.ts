@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { AfterViewInit, Component } from '@angular/core';
 import { DataService } from 'src/app/services/request-data/data.service';
 import { Router } from '@angular/router';
 import { NavVerticalItems } from 'ngx-obelisco-example/core/models';
@@ -8,7 +8,7 @@ import { NavVerticalItems } from 'ngx-obelisco-example/core/models';
   templateUrl: './docs.component.html',
   styleUrls: ['./docs.component.scss'],
 })
-export class DocsComponent {
+export class DocsComponent implements AfterViewInit {
   constructor(private data: DataService, private router: Router) {}
 
   isRouteActive(route: string): boolean {
@@ -84,4 +84,16 @@ export class DocsComponent {
       ],
     },
   ];
+
+  ngAfterViewInit() {
+    const collapseSubmenu = document.getElementById('collapseSubmenu');
+    if (collapseSubmenu) {
+      const items = collapseSubmenu.querySelectorAll('*');
+      items.forEach(item => {
+        item.addEventListener('click', () => {
+          collapseSubmenu.classList.remove('show');
+        });
+      });
+    }
+  }
 }

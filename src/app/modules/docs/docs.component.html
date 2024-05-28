@@ -1,19 +1,31 @@
 <div class="container-fluid">
   <div class="row">
     <div
-      class="fix-height back-nav col-md-0 col-lg-3 col-xl-2 bg-light py-3 h-auto"
+      class="back-nav col-md-12 col-lg-3 col-xl-2 bg-light pt-3 pb-0 pb-md-3 h-auto"
     >
-      <o-nav-vertical
-        customClasses="mb-3"
-        [navVertItems]="introList"
-      ></o-nav-vertical>
+      <o-button
+        type="secondary"
+        [isOutline]="true"
+        icon="bx bx-list-ul"
+        customClasses="btn-categories mb-2"
+        text="Secciones"
+        dataToggle="collapse"
+        dataTarget="collapseSubmenu"
+      >
+      </o-button>
+      <div id="collapseSubmenu" class="menu-categories collapse">
+        <o-nav-vertical
+          customClasses="mb-3"
+          [navVertItems]="introList"
+        ></o-nav-vertical>
 
-      <o-nav-vertical
-        customClasses="mb-3"
-        [navVertItems]="navList"
-      ></o-nav-vertical>
+        <o-nav-vertical
+          customClasses="mb-3"
+          [navVertItems]="navList"
+        ></o-nav-vertical>
 
-      <o-nav-vertical [navVertItems]="howToList"></o-nav-vertical>
+        <o-nav-vertical [navVertItems]="howToList"></o-nav-vertical>
+      </div>
     </div>
     <div
       class="back-content col-md-12 col-lg-9 col-xl-10 px-0 pr-3 py-3 bg-light"
