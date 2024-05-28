@@ -17,7 +17,6 @@ const routes: Routes = [
   },
   {
     path: 'docs',
-    component: DocsComponent,
     loadChildren: () => import('./modules/docs/docs.module').then((m) => m.DocsModule)
   },
   { path: '**', pathMatch: 'full', redirectTo: '' }

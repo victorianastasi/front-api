@@ -4,8 +4,11 @@
 
   .about-title {
     font-weight: 700;
-    padding: 5rem;
+    padding: 5rem 1rem;
     background-color: #e6ebf0;
+    @media screen and (min-width: 576px) {
+      padding: 5rem;
+    }
   }
   .about-sections {
     max-width: 1080px;
