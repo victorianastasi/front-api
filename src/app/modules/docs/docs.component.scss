@@ -169,4 +169,8 @@ h3 {
     }
     padding-left: 16px !important;
   }
+  @media screen and (min-width: 975px) {
+    overflow: auto;
+    height: calc(100vh - 80px);
+  }
 }
